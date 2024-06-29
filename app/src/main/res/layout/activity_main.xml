@@ -1,19 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/ic_consumption_fuel_1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/consumption_fuel_edit_text_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumption_fuel_edit_text_1"
+        app:srcCompat="@drawable/baseline_local_gas_station_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consumption_fuel_edit_text_1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/list_fuel_1"
+        app:layout_constraintStart_toEndOf="@+id/ic_consumption_fuel_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/consumption_fuel_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Miles per gallon"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/list_fuel_1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/fuels"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/consumption_fuel_edit_text_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumption_fuel_edit_text_1" />
+
+    <ImageView
+        android:id="@+id/ic_consumption_fuel_2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/consumption_fuel_edit_text_2"
+        app:layout_constraintStart_toStartOf="@+id/ic_consumption_fuel_1"
+        app:layout_constraintTop_toTopOf="@+id/consumption_fuel_edit_text_2"
+        app:srcCompat="@drawable/baseline_local_gas_station_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consumption_fuel_edit_text_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/list_fuel_2"
+        app:layout_constraintStart_toEndOf="@+id/ic_consumption_fuel_2"
+        app:layout_constraintTop_toBottomOf="@+id/consumption_fuel_edit_text_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/consumption_fuel_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Miles per gallon"
+            android:inputType="number|numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_price_per_gallon_1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_per_gallon_edit_text_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price_per_gallon_edit_text_1"
+        app:srcCompat="@drawable/baseline_monetization_on_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/price_per_gallon_edit_text_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_price_per_gallon_1"
+        app:layout_constraintTop_toBottomOf="@+id/consumption_fuel_edit_text_2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/price_per_gallon_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price per Gallon"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_price_per_gallon_2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_per_gallon_edit_text_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price_per_gallon_edit_text_2"
+        app:srcCompat="@drawable/baseline_monetization_on_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/price_per_gallon_edit_text_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_price_per_gallon_2"
+        app:layout_constraintTop_toBottomOf="@+id/price_per_gallon_edit_text_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/price_per_gallon_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price per Gallon"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/list_fuel_2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/fuels"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/consumption_fuel_edit_text_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumption_fuel_edit_text_2" />
+
+    <Button
+        android:id="@+id/compare_button"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/compare"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/compare_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/price_per_gallon_edit_text_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Fast &amp; Fuels</string>
+    <string name="consumption_fuel_1">Consumption fuel 1</string>
+    <string name="consumption_fuel_2">Consumption fuel 2</string>
+    <string name="price_per_gallon_fuel_1">Price per gallon fuel 1</string>
+    <string name="price_per_gallon_fuel_2">Price per gallon fuel 2</string>
+    <string name="fuels">Fuels</string>
+    <string name="compare">Compare</string>
+    <string name="field_error">Field must be filled!</string>
+    <string name="list_error">Fuel must be selected!</string>
 </resources>
